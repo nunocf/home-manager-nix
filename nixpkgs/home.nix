@@ -7,6 +7,7 @@ let
 
   nvimConfig = import "${config.xdg.configHome}/nvim/nvim.nix";
   zshConfig = import "${config.xdg.configHome}/zsh/zsh.nix";
+  gitConfig = import "${config.xdg.configHome}/git/git.nix";
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -57,15 +58,7 @@ in
   programs.neovim = nvimConfig config pkgs;
   programs.zsh = zshConfig config;
 
-    programs.git = {
-    enable = true;
-    userName  = "nunocf";
-    userEmail = "nunocf@gmail.com";
-
-    aliases = {
-      st = "status"; 
-    };
-  };
+  programs.git = gitConfig;
 
   programs.kitty = {
     enable = true;

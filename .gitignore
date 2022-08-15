@@ -1,3 +1,13 @@
 fontconfig/
-git/
+
+# only track the config file. Ignores the rest
+git/*
+!git/git.nix
+
+nvim/*/
+!nvim/nvim.nix
+!nvim/lua/*
+
 kitty/
+
+
