@@ -1,0 +1,82 @@
+{ config, pkgs, ... }:
+
+let
+
+  # Break config up:
+  # some_config = import ./some_path/some_config.nix
+
+  nvimConfig = import "${config.xdg.configHome}/nvim/nvim.nix";
+  zshConfig = import "${config.xdg.configHome}/zsh/zsh.nix";
+in
+{
+  # Home Manager needs a bit of information about you and the
+  # paths it should manage.
+
+  home.username = "nunocf";
+  home.homeDirectory = "/Users/nunocf";
+
+  imports = [
+    ./darwin-application-activation.nix
+  ];
+
+  home.sessionVariables = {
+    EDITOR="nvim";
+    TERMINAL="kitty";
+  };
+  
+  fonts.fontconfig.enable = true;
+  
+  home.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    kitty
+    kitty-themes
+    zsh
+    nix
+    jq
+    fzf
+    ripgrep
+  ];
+
+
+  # This value determines the Home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when a new Home Manager release introduces backwards
+  # incompatible changes.
+  #
+  # You can update Home Manager without changing this value. See
+  # the Home Manager release notes for a list of state version
+  # changes in each release.
+  home.stateVersion = "22.05";
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
+  programs.bat.enable = true;
+
+  # NeoVim setup & alias
+  programs.neovim = nvimConfig config pkgs;
+  programs.zsh = zshConfig config;
+
+    programs.git = {
+    enable = true;
+    userName  = "nunocf";
+    userEmail = "nunocf@gmail.com";
+
+    aliases = {
+      st = "status"; 
+    };
+  };
+
+  programs.kitty = {
+    enable = true;
+
+    settings = {
+      font_size = "16.0";
+      font_family = "FiraCode Nerd Font";
+      disable_ligatures = "never";
+      copy_on_select = "yes";
+    };
+
+    theme = "Nord";
+  };
+}
