@@ -7,6 +7,7 @@ git/*
 gh
 
 nvim/*/
+nvim/init.vim
 !nvim/nvim.nix
 !nvim/lua/*
 

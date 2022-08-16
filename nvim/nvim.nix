@@ -5,6 +5,7 @@ config: pkgs:
 
   extraConfig = ''
     luafile ${config.xdg.configHome}/nvim/lua/settings.lua
+    luafile ${config.xdg.configHome}/nvim/lua/keymaps.lua
     luafile ${config.xdg.configHome}/nvim/lua/treesitter.lua
     luafile ${config.xdg.configHome}/nvim/lua/bufferline.lua
     luafile ${config.xdg.configHome}/nvim/lua/galaxyline.lua
