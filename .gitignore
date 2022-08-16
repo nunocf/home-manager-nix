@@ -4,6 +4,8 @@ fontconfig/
 git/*
 !git/git.nix
 
+gh
+
 nvim/*/
 !nvim/nvim.nix
 !nvim/lua/*

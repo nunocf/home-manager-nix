@@ -32,10 +32,15 @@ in
     kitty
     kitty-themes
     zsh
+    slack
     nix
     jq
     fzf
     ripgrep
+    
+    #Lsp stuff
+    rnix-lsp
+    sumneko-lua-language-server
   ];
 
 
