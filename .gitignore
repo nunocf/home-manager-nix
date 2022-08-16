@@ -1,16 +1,5 @@
-fontconfig/
-
-# only track the config file. Ignores the rest
-git/*
-!git/git.nix
-
+fontconfig/*
+git/config
 gh
-
-nvim/*/
 nvim/init.vim
-!nvim/nvim.nix
-!nvim/lua/*
-
 kitty/
-
-
