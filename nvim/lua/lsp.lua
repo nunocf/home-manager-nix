@@ -1,5 +1,13 @@
 require'lspconfig'.rnix.setup {}
-require'lspconfig'.sumneko_lua.setup {}
+require'lspconfig'.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {"vim", "use"},
+      },
+    }
+  }
+}
 
 vim.o.completeopt = "menuone,noselect"
 

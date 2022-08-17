@@ -10,6 +10,8 @@ config: pkgs:
     luafile ${config.xdg.configHome}/nvim/lua/treesitter.lua
     luafile ${config.xdg.configHome}/nvim/lua/bufferline.lua
     luafile ${config.xdg.configHome}/nvim/lua/galaxyline.lua
+    luafile ${config.xdg.configHome}/nvim/lua/telescope.lua
+    luafile ${config.xdg.configHome}/nvim/lua/surround-nvim.lua
 
     lua << EOF
     vim.defer_fn(function()
@@ -24,6 +26,9 @@ config: pkgs:
   '';
 
   plugins = with pkgs.vimPlugins; [
+    # Misc
+    surround-nvim
+    rainbow
     # matching line indents
     indentLine
 
@@ -38,10 +43,14 @@ config: pkgs:
     nvim-tree-lua
     nvim-web-devicons
 
+    # Telescope
+    popup-nvim
+    plenary-nvim
+    telescope-nvim
+
     # Eye candy
     nvim-treesitter
     nord-nvim
-
     bufferline-nvim
     galaxyline-nvim
   ];
