@@ -3,3 +3,4 @@ git/config
 gh
 nvim/init.vim
 kitty/
+direnv/

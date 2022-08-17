@@ -43,7 +43,6 @@ in
     sumneko-lua-language-server
   ];
 
-
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -57,14 +56,17 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.bat.enable = true;
-
   # NeoVim setup & alias
   programs.neovim = nvimConfig config pkgs;
-  programs.zsh = zshConfig config;
 
+  # direnv
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
+  # git ofc
   programs.git = gitConfig;
 
+  # Terminal stuff
   programs.kitty = {
     enable = true;
 
@@ -77,4 +79,8 @@ in
 
     theme = "Nord";
   };
+  programs.zsh = zshConfig config;
+
+  # Terminal utils
+  programs.bat.enable = true;
 }
