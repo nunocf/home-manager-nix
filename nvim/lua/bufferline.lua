@@ -26,7 +26,7 @@
             show_close_icon = true,
             show_tab_indicators = false,
             persist_buffer_sort = true,
-            separator_style = "thick",
+            separator_style = "thin",
             enforce_regular_tabs = true,
             always_show_bufferline = true,
             offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left"}},
