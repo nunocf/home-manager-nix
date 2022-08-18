@@ -39,7 +39,7 @@ in
 
     slack
 
-    #Lsp stuff
+    #Lsp stuff 
     rnix-lsp
     sumneko-lua-language-server
   ];
