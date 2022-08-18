@@ -12,6 +12,9 @@ config: pkgs:
     luafile ${config.xdg.configHome}/nvim/lua/_telescope.lua
     luafile ${config.xdg.configHome}/nvim/lua/_galaxyline.lua
     luafile ${config.xdg.configHome}/nvim/lua/surround-nvim.lua
+    luafile ${config.xdg.configHome}/nvim/lua/_toggleterm.lua
+    luafile ${config.xdg.configHome}/nvim/lua/_nvim-autopairs.lua
+    luafile ${config.xdg.configHome}/nvim/lua/_gitsigns.lua
 
     lua << EOF
     vim.defer_fn(function()
@@ -29,6 +32,9 @@ config: pkgs:
     # Misc
     surround-nvim
     rainbow
+    nvim-autopairs
+    comment-nvim
+
     # matching line indents
     indentLine
 
@@ -37,7 +43,18 @@ config: pkgs:
 
     # LSP
     nvim-lspconfig
-    nvim-compe
+    null-ls-nvim
+
+    # Cmp plugins
+    nvim-cmp
+    cmp-buffer
+    cmp-path
+    cmp-cmdline
+    cmp_luasnip
+
+    #Snippets
+    luasnip
+    friendly-snippets
 
     # File tree
     nvim-tree-lua
@@ -48,10 +65,15 @@ config: pkgs:
     plenary-nvim
     telescope-nvim
 
+    # Git
+    gitsigns-nvim
+
     # Eye candy
     nvim-treesitter
+    nvim-ts-context-commentstring
     nord-nvim
     bufferline-nvim
     galaxyline-nvim
+    toggleterm-nvim
   ];
 }

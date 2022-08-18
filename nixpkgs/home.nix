@@ -42,6 +42,9 @@ in
     #Lsp stuff 
     rnix-lsp
     sumneko-lua-language-server
+    haskellPackages.haskell-language-server
+    elmPackages.elm-language-server
+
   ];
 
   # This value determines the Home Manager release that your

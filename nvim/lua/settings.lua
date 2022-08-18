@@ -7,6 +7,8 @@ vim.cmd [[
   set nowritebackup
   set noerrorbells
   set noswapfile
+  set whichwrap+=<,>,[,],h,l
+  set iskeyword+=-
 ]]
 
 g.mapleader = ","
@@ -44,3 +46,7 @@ opt.autoread = true
 opt.incsearch = true
 opt.hidden = true
 opt.shortmess = "atI"
+
+opt.splitbelow = true
+opt.splitright = true
+opt.showmode = false

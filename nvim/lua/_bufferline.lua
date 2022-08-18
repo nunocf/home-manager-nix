@@ -16,7 +16,7 @@ require"bufferline".setup{
         max_prefix_length = 15, -- prefix used when a buffer is deduplicated
         tab_size = 18,
         diagnostics = "nvim_lsp",
-        diagnostics_indicator = function(count, level)
+        diagnostics_indicator = function(count)
           return "("..count..")"
         end,
         groups = {},
