@@ -3,6 +3,8 @@
   userName  = "Nuno Ferreira";
   userEmail = "nunogcferreira@gmail.com";
 
+  lfs = { enable = true; };
+
   aliases = {
     aa = "add --all";
     ap = "add --patch";

@@ -36,6 +36,7 @@ in
     jq
     fzf
     ripgrep
+    graphviz
 
     slack
 

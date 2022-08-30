@@ -15,7 +15,7 @@ require("nvim-tree").setup {
   reload_on_bufenter = false,
   respect_buf_cwd = false,
   view = {
-    adaptive_size = false,
+    adaptive_size = true,
     centralize_selection = false,
     height = 30,
     hide_root_folder = false,
@@ -23,12 +23,6 @@ require("nvim-tree").setup {
     number = false,
     relativenumber = false,
     signcolumn = "yes",
-    mappings = {
-      custom_only = false,
-      list = {
-        -- user mappings go here
-      },
-    },
   },
   renderer = {
     add_trailing = false,
@@ -86,7 +80,7 @@ require("nvim-tree").setup {
     symlink_destination = true,
   },
   update_focused_file = {
-    enable = false,
+    enable = true,
     update_root = false,
     ignore_list = {},
   },
