@@ -1,3 +1,21 @@
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+  -- Enable completion triggered by <c-x><c-o>
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  vim.keymap.set('n', '<leader>h', vim.lsp.buf.formatting, bufopts)
+end
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    callback = function()
+        vim.lsp.buf.formatting() 
+    end
+})
+
 require'lspconfig'.rnix.setup {}
 require'lspconfig'.sumneko_lua.setup {
   settings = {
@@ -9,9 +27,11 @@ require'lspconfig'.sumneko_lua.setup {
   }
 }
 require'lspconfig'.elmls.setup {
-  root_dir = function(fname)    
+  root_dir = function()
         return vim.loop.cwd()
     end,
+
+  on_attach = on_attach
 }
 
 local cmp_status_ok, cmp = pcall(require, "cmp")

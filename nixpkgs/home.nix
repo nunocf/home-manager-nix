@@ -45,6 +45,7 @@ in
     sumneko-lua-language-server
     haskellPackages.haskell-language-server
     elmPackages.elm-language-server
+    elmPackages.elm-format
 
   ];
 

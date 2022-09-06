@@ -36,6 +36,7 @@ config: pkgs:
     rainbow
     nvim-autopairs
     comment-nvim
+    vim-commentary
 
     # matching line indents
     indentLine

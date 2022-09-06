@@ -1,7 +1,6 @@
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 require("null-ls").setup({
   sources = {
-    require("null-ls").builtins.formatting.elm_format,
     require("null-ls").builtins.formatting.fourmolu,
   },
   -- you can reuse a shared lspconfig on_attach callback here
