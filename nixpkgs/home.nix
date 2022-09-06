@@ -83,6 +83,10 @@ in
     };
 
     theme = "Nord";
+
+    keybindings = {
+      "ctrl+shift+h" = "goto_layout horizontal";
+    };
   };
   programs.zsh = zshConfig config;
 

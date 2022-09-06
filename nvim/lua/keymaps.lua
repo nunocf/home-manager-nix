@@ -64,3 +64,8 @@ keymap("n", "<leader>st", ":Telescope live_grep<CR>")
 -- stop highlighting with <CR> 
 keymap("n", "<CR>", ":noh<CR><CR>", {noremap = true})
 
+-- Diagnostics
+keymap('n', '<leader>X', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>x', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+
+

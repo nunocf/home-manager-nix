@@ -15,11 +15,13 @@ config: pkgs:
     luafile ${config.xdg.configHome}/nvim/lua/_toggleterm.lua
     luafile ${config.xdg.configHome}/nvim/lua/_nvim-autopairs.lua
     luafile ${config.xdg.configHome}/nvim/lua/_gitsigns.lua
+    luafile ${config.xdg.configHome}/nvim/lua/_null-ls.lua
 
     lua << EOF
     vim.defer_fn(function()
       vim.cmd [[
-        luafile ${config.xdg.configHome}/nvim/lua/lsp.lua
+        luafile ${config.xdg.configHome}/nvim/lua/lsp/configs.lua
+        luafile ${config.xdg.configHome}/nvim/lua/lsp/handlers.lua
       ]]
     end, 70)
     EOF

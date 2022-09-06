@@ -8,6 +8,11 @@ require'lspconfig'.sumneko_lua.setup {
     }
   }
 }
+require'lspconfig'.elmls.setup {
+  root_dir = function(fname)    
+        return vim.loop.cwd()
+    end,
+}
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
