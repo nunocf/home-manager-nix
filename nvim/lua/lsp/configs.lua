@@ -6,32 +6,38 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', '<leader>h', vim.lsp.buf.formatting, bufopts)
 end
 
 vim.api.nvim_create_autocmd("BufWritePost", {
-    callback = function()
-        vim.lsp.buf.formatting() 
-    end
+  callback = function()
+    vim.lsp.buf.formatting()
+  end
 })
 
-require'lspconfig'.rnix.setup {}
-require'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.rnix.setup {}
+require 'lspconfig'.sumneko_lua.setup {
   settings = {
     Lua = {
       diagnostics = {
-        globals = {"vim", "use"},
+        globals = { "vim", "use" },
       },
     }
   }
 }
-require'lspconfig'.elmls.setup {
+require 'lspconfig'.elmls.setup {
   root_dir = function()
-        return vim.loop.cwd()
-    end,
+    return vim.loop.cwd()
+  end,
 
   on_attach = on_attach
+}
+
+require 'lspconfig'.hls.setup {
+  haskell = {
+    formattingProvider = "fourmolu"
+  }
 }
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
@@ -89,7 +95,7 @@ cmp.setup {
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),

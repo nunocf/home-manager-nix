@@ -15,7 +15,6 @@ config: pkgs:
     luafile ${config.xdg.configHome}/nvim/lua/_toggleterm.lua
     luafile ${config.xdg.configHome}/nvim/lua/_nvim-autopairs.lua
     luafile ${config.xdg.configHome}/nvim/lua/_gitsigns.lua
-    luafile ${config.xdg.configHome}/nvim/lua/_null-ls.lua
 
     lua << EOF
     vim.defer_fn(function()
@@ -46,7 +45,6 @@ config: pkgs:
 
     # LSP
     nvim-lspconfig
-    null-ls-nvim
 
     # Cmp plugins
     nvim-cmp
