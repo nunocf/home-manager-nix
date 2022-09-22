@@ -36,7 +36,10 @@ require 'lspconfig'.elmls.setup {
 
 require 'lspconfig'.hls.setup {
   haskell = {
-    formattingProvider = "fourmolu"
+    formattingProvider = "fourmolu",
+    plugin = {
+      hlint = { globalOn = true }
+    }
   }
 }
 

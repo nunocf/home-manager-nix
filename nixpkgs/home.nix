@@ -44,6 +44,7 @@ in
     rnix-lsp
     sumneko-lua-language-server
     haskellPackages.haskell-language-server
+    haskellPackages.hlint
     elmPackages.elm-language-server
     elmPackages.elm-format
 
