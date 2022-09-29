@@ -47,6 +47,8 @@ in
     haskellPackages.hlint
     elmPackages.elm-language-server
     elmPackages.elm-format
+    nodePackages.eslint
+    nodePackages.prettier
 
   ];
 
