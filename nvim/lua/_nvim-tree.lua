@@ -145,6 +145,9 @@ require("nvim-tree").setup {
     prefix = "[FILTER]: ",
     always_show_folders = true,
   },
+  filters = {
+    exclude = { "generated" }
+  },
   log = {
     enable = false,
     truncate = false,
