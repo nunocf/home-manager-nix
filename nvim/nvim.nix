@@ -75,5 +75,6 @@ config: pkgs:
     bufferline-nvim
     galaxyline-nvim
     toggleterm-nvim
+    haskell-vim
   ];
 }

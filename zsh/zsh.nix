@@ -1,7 +1,7 @@
 config:
 {
   enable = true;
-  
+
   enableAutosuggestions = true;
   enableSyntaxHighlighting = true;
 
@@ -9,6 +9,7 @@ config:
     ll = "ls -l";
     update = "home-manager switch";
     edit = "home-manager edit";
+    nri = "cd ~/dev/NoRedInk";
   };
 
   history = {
@@ -18,7 +19,7 @@ config:
 
   oh-my-zsh = {
     enable = true;
-    plugins = ["git"];
+    plugins = [ "git" ];
     theme = "robbyrussell";
   };
 }
