@@ -21,12 +21,12 @@ in
   ];
 
   home.sessionVariables = {
-    EDITOR="nvim";
-    TERMINAL="kitty";
+    EDITOR = "nvim";
+    TERMINAL = "kitty";
   };
-  
+
   fonts.fontconfig.enable = true;
-  
+
   home.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     kitty
