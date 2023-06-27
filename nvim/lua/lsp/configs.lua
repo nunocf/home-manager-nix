@@ -5,7 +5,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 })
 
 require 'lspconfig'.rnix.setup {}
-require 'lspconfig'.sumneko_lua.setup {
+require 'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {

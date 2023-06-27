@@ -38,8 +38,6 @@ in
     ripgrep
     graphviz
 
-    slack
-
     #Lsp stuff 
     rnix-lsp
     sumneko-lua-language-server
