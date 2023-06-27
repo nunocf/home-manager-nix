@@ -47,7 +47,6 @@ in
     elmPackages.elm-format
     nodePackages.eslint
     nodePackages.prettier
-    nodePackages.vscode-langservers-extracted
 
   ];
 
