@@ -2,6 +2,6 @@ fontconfig/*
 result
 git/config
 gh
-nvim/init.vim
+nvim/init.lua
 kitty/
 direnv/
