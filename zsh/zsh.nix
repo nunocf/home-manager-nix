@@ -7,7 +7,7 @@ config:
 
   shellAliases = {
     ll = "ls -l";
-    update = "home-manager switch -b backup --impure";
+    update = "home-manager switch --impure";
     edit = "home-manager edit";
     nri = "cd ~/dev/NoRedInk";
   };
