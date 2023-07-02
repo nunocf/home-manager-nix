@@ -7,6 +7,7 @@ config: pkgs:
     luafile ${config.xdg.configHome}/nvim/lua/settings.lua
     luafile ${config.xdg.configHome}/nvim/lua/keymaps.lua
     luafile ${config.xdg.configHome}/nvim/lua/_nvim-tree.lua
+    luafile ${config.xdg.configHome}/nvim/lua/_treesitter.lua
     luafile ${config.xdg.configHome}/nvim/lua/_bufferline.lua
     luafile ${config.xdg.configHome}/nvim/lua/_telescope.lua
     luafile ${config.xdg.configHome}/nvim/lua/_galaxyline.lua
@@ -69,7 +70,7 @@ config: pkgs:
     gitsigns-nvim
 
     # Eye candy
-    (nvim-treesitter.withPlugins (plugins: pkgs.tree-sitter.allGrammars))
+    nvim-treesitter.withAllGrammars
     nvim-ts-context-commentstring
     nord-nvim
     bufferline-nvim
