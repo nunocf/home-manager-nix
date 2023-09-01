@@ -23,6 +23,7 @@ require 'lspconfig'.elmls.setup {
 }
 
 require 'lspconfig'.hls.setup {
+  on_attach = on_attach,
   haskell = {
     formattingProvider = "fourmolu",
     plugin = {
@@ -58,16 +59,16 @@ local kind_icons = {
   Constructor = "",
   Field = "",
   Variable = "",
-  Class = "",
+  Class = "󰌗",
   Interface = "",
   Module = "",
   Property = "",
   Unit = "",
-  Value = "",
+  Value = "󰎠",
   Enum = "",
   Keyword = "",
   Snippet = "",
-  Color = "",
+  Color = "󰏘",
   File = "",
   Reference = "",
   Folder = "",
