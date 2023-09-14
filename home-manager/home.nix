@@ -37,6 +37,7 @@ in
     fzf
     ripgrep
     graphviz
+    lazygit
 
     #Lsp stuff 
     rnix-lsp
