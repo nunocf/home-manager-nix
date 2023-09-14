@@ -53,6 +53,9 @@ config: pkgs:
     cmp-cmdline
     cmp_luasnip
 
+    #Git
+    lazygit-nvim
+
     #Snippets
     luasnip
     friendly-snippets
