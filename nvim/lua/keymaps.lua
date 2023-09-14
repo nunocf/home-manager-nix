@@ -71,3 +71,7 @@ keymap("n", "<CR>", ":noh<CR><CR>", { noremap = true })
 -- Diagnostics
 keymap('n', '<leader>X', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>x', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+
+-- Lazygit
+keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>lr', ':LspRestart<CR>', { noremap = true, silent = true })
