@@ -68,6 +68,7 @@ config: pkgs:
     popup-nvim
     plenary-nvim
     telescope-nvim
+    telescope-live-grep-args-nvim
 
     # Git
     gitsigns-nvim

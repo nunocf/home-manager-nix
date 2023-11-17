@@ -38,6 +38,8 @@ in
     ripgrep
     graphviz
     lazygit
+    nodejs
+    yarn
 
     #Lsp stuff 
     rnix-lsp
@@ -48,6 +50,7 @@ in
     elmPackages.elm-format
     nodePackages.eslint
     nodePackages.prettier
+    nodePackages.create-react-app
 
   ];
 

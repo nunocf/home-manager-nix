@@ -63,7 +63,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- Telescope keybinds
 keymap("n", "<leader>f", ":Telescope find_files<CR>")
-keymap("n", "<leader>st", ":Telescope live_grep<CR>")
+keymap("n", "<leader>st", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
 -- stop highlighting with <CR>
 keymap("n", "<CR>", ":noh<CR><CR>", { noremap = true })
