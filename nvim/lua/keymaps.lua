@@ -75,3 +75,7 @@ keymap('n', '<leader>x', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = 
 -- Lazygit
 keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>lr', ':LspRestart<CR>', { noremap = true, silent = true })
+
+-- Copy filename/filepath
+keymap('n', '<leader>cf', ':let @+=expand("%")<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>cp', ':let @+=expand("%:p")<CR>', { noremap = true, silent = true })
