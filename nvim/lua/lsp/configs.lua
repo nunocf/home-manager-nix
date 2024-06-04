@@ -25,7 +25,7 @@ require 'lspconfig'.elmls.setup {
 require 'lspconfig'.hls.setup {
   on_attach = on_attach,
   haskell = {
-    formattingProvider = "fourmolu",
+    formattingProvider = "ormolu",
     plugin = {
       hlint = { globalOn = true }
     }

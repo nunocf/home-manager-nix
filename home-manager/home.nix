@@ -23,6 +23,7 @@ in
   home.sessionVariables = {
     EDITOR = "nvim";
     TERMINAL = "kitty";
+    PATH = "$HOME/.ghcup/bin:$PATH";
   };
 
   fonts.fontconfig.enable = true;
